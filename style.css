@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --main-color: #00eb9c;
+    --color: #00d483;
+    --white: #ffffff;
+    --light-gray: #8d8d8d;
+    --hover-color: #00bd74;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--main-color);
+}
+
+.wrapper{
+    background: var(--white);
+    width: 370px;
+    padding: 30px;
+    box-shadow: 0 4px 31px rgba(0, 0, 0, 0.45);
+}
+
+.wrapper header{
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper form{
+    margin: 40px 0 20px 0;
+}
+
+form :where(input, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+form p{
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+form input{
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid var(--light-gray);
+}
+form input:focus{
+    padding: 0 14px;
+    border: 2px solid var(--main-color);
+}
+
+form .drop-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.drop-list .select-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 115px;
+    border: 1px solid var(--light-gray);
+}
+.drop-list .select-box:hover{
+    border: 1px solid var(--color);
+}
+
+.select-box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+    cursor: pointer;
+}
+
+.select-box select::-webkit-scrollbar{
+    width: 8px;
+}
+.select-box select::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+.select-box select::-webkit-scrollbar-thumb{
+    background: #888;
+    border-right: 2px solid #fff;
+}
+
+.select-box img{
+    max-width: 25px;
+}
+
+.drop-list .icon{
+    font-size: 26px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+.drop-list .icon:hover{
+    color: var(--color);
+}
+
+form .exchange-rate{
+    font-size: 17px;
+    margin: 20px 0 30px;
+    font-weight: 500;
+}
+
+form button{
+    font-size: 19px;
+    color: var(--white);
+    background: var(--color);
+    cursor: pointer;
+    height: 52px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background-color: var(--hover-color);
+}
+
+@media(max-width:400px){
+    .wrapper{
+        max-width:345px;
+        width:100%
+    }
+}
